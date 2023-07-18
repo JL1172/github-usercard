@@ -10,7 +10,7 @@ const cards = document.querySelector('.cards');
 
 axios.get(URL)
 .then(resp => {
-    cards.appendChild(cardMaker(resp.data)) ///ohhhh basically what happens here is that it takes an object and destructures it through this function
+    cards.prepend(cardMaker(resp.data)) ///ohhhh basically what happens here is that it takes an object and destructures it through this function
 })
 .catch(err=> {
   console.log(err)
